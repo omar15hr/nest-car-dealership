@@ -19,4 +19,13 @@ export class CarsService {
       model: 'Camaro',
     },
   ];
+
+  public findAll() {
+    return this.cars;
+  }
+
+  public findOneById(id: number) {
+    const car = this.cars.find(car => car.id === id);
+    return car;
+  }
 }
